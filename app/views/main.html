@@ -1,0 +1,8 @@
+<div class="container">
+  <form name="userForm" class="css-form form-signin form-signin-login" novalidate>
+    <label>Faites de votre mariage le plus beaux jours de votre vie et ceux de vos proches</label>
+    <input type="email" name="email" class="form-control" placeholder="Email" ng-model="user.email" required>
+    <input type="password" name="password" class="form-control" placeholder="Mot de passe" ng-model="user.pwd" required>
+    <button class="btn btn-large btn-primary" type="submit" ng-disabled="userForm.$invalid" ng-click="submitLogin(user)">GO</button>
+  </form>
+</div>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-responsive.css"/>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/howitwork.css">
+    <link rel="stylesheet" href="styles/ourservices.css">
+    <link rel="stylesheet" href="styles/contactus.css">
+    
+    <link rel="stylesheet" href="styles/myspace.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <!-- endbuild -->
+
+    <script src="scripts/controllers/go.js"></script>
+  </head>
+  <body ng-app="mySeatingChartApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="header" ng-controller="headerCtrl">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#!/">SeatingChart</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="header-navbar-menu">
+            <ul class="nav navbar-nav">
+              <li><a href="#!/howitwork">Comment ça marche?</a></li>
+              <li><a ng-href="#!/ourservices">Nos services</a></li>
+              <li><a ng-href="#!/contactus">Nous contacter</a></li>
+              <li><a ng-href="#!/aboutus">A propos de nous</a></li>
+            </ul>
+            <a class="navbar-brand pull-right" href="#!/">{{loggedUser}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div ng-view=""></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> My seating chart</p>
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <!-- <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script> -->
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/howitwork.js"></script>
+        <script src="scripts/controllers/ourservices.js"></script>
+        <script src="scripts/controllers/contactus.js"></script>
+        <script src="scripts/controllers/aboutus.js"></script>
+        <script src="scripts/controllers/myspace.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+
+        <script src="scripts/directives/godiagram.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

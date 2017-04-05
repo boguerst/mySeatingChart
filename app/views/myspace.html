@@ -1,0 +1,32 @@
+<div id="myspace">
+	<h3>Mes évènements</h3>
+
+	<div>
+		<form name="eventForm" class="css-form form-signin " novalidate>
+			<input type="text" name="name" class="form-control" placeholder="Nom évènement" ng-model="event.name" required>
+			<input type="text" name="place" class="form-control" placeholder="Lieu de cérémonie" ng-model="event.place" required>
+			<input type="text" name="date" class="form-control" placeholder="10/02/2018" ng-model="event.date" required>
+			<input type="text" name="guestsCount" class="form-control" placeholder="Nombre d'invités" ng-model="event.guestsCount" required>
+			<button class="btn btn-large btn-primary" type="submit" ng-disabled="eventForm.$invalid" ng-click="submitEvent(event)">Créer</button>
+		</form>
+	</div>
+
+	<table class="table table-sm table-striped table-hover">
+		<thead>
+			<tr>
+				<th>Evènements</th>
+				<th>Lieux</th>
+				<th>Dates</th>
+				<th>Nombre d’invités</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="event in events | orderBy:'name'" ng-click="goToRoom()">
+				<td>{{event.name}}</td>
+				<td>{{event.place}}</td>
+				<td>{{event.date}}</td>
+				<td>{{event.seatsNb}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
